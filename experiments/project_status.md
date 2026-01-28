@@ -11,4 +11,5 @@ Download & inspect PAMAP2 by running inference
 - 
 
 ## Blockers / Risks
-- None identified at this stage
+- Unable to connect to the GPU
+- I have not added the data files just yet, because of warning from Git. 
