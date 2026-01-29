@@ -1,0 +1,25 @@
+[MODEL INFERENCE]
+652/652 [==============================] - 25s 38ms/step
+
+[CLASSIFICATION REPORT]
+                   precision    recall  f1-score   support
+            lying       1.00      1.00      1.00         0
+          sitting       0.94      0.99      0.97      7748
+         standing       0.99      0.94      0.96      7681
+          walking       0.99      0.99      0.99      8118
+          running       0.99      0.99      0.99      8572
+          cycling       1.00      0.99      0.99      7600
+   Nordic walking       1.00      0.99      1.00      6828
+ ascending stairs       1.00      1.00      1.00      8896
+descending stairs       1.00      1.00      1.00         0
+  vacuum cleaning       1.00      1.00      1.00         0
+          ironing       1.00      1.00      1.00         0
+     rope jumping       0.98      0.99      0.98      4431
+
+        micro avg       0.98      0.99      0.98     59874
+        macro avg       0.99      0.99      0.99     59874
+     weighted avg       0.98      0.99      0.98     59874
+
+
+
+The confusion matrix is inside the results sub-directory.
