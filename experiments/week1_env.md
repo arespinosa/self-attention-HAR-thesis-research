@@ -13,4 +13,5 @@ Here I will decsribe the steps and configurations needed, to run initial experim
   - TF 2.3.1 requires **CUDA 10.1** and **cuDNN 7.6**; current WSL2 setup has CUDA 13.
 - `protobuf` version needed to be downgraded to **3.20.3** to work with TF 2.3.1.
 
-- **Current setup will run experiments on CPU**.
+
+- Current setup will run experiments on CPU
