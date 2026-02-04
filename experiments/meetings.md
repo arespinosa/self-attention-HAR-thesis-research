@@ -1,10 +1,9 @@
-Meeting 1 (01/22/2026)
+### Meeting 1 (01/22/2026)
 - Task 1 — Repo setup & environment 
 Navigate to week1_env.md to view the environment setup 
 - Task 2 - download and inspect PAMAP2
 Currently downloaded the PAMAP2 dataset with command: python dataset_download.py -d pamap2 -z
 - Task 3 - Run the pretrained PAMAP2 inference and store results. 
-
 
 ## Number of Subjects
 - 9 subjects, 1 female & 8 males. 
@@ -36,7 +35,7 @@ It uses 19 distinct labels. The numbers attached are their labeled ids. (Found f
 
 ## Wearables Used and Column Representation 
 There were 4 wearables being used. Heart monitors and 3 IMUs(Inertial Measurement Unit): Hand, Chest,& Ankle.
-"Each of the data-files contains 54 columns per row" and they are represented as: 
+"Each of the data-files contains 54 columns per row"
 - 1 timestamp (s)
 - 2 activityID  
 - 3 heart rate (bpm)
@@ -60,10 +59,18 @@ Subject 106 was used for testing, Subject 105 was used for validation, and the r
 Inside the saved_model.py we can find a fully pretrained model w/ the weights included. This indicates that it is ready for inference. 
 Steps I took, 
 1. I created an empty processed folder 
-2. Since we were using the pre-trained weights, I ran the command:  `TF_CPP_MIN_LOG_LEVEL=3 python main.py --test --dataset pamap2` 
+2. Since we were using the pre-trained weights, I ran the command:  TF_CPP_MIN_LOG_LEVEL=3 python main.py --test --dataset pamap2 
 3. I created a task3.log and stored the results on there 
 
 My initial analyzation from the classification report is that this HAR model does perform well with the test subjects. The precision for the different 
 motion activities are all in the high 90 percentile. Also, the activities like lying, descending stairs, ironing, and vaccum cleaning can be neglected since their support is 0. 
 That means that these activities were not done by the test subject. Perhaps, we can try other subjects that do perform these activities to see how they do. 
+
+
+
+### Meeting 2 (01/29/2026) 
+Given that we know the input, we want to extract each embedding and the label of that activity. After analyzing the file har_model.py inside the model package, I was able to identify the embedding layer as line 27: x = tf.keras.layers.Dense(n_outputs * 4, activation='relu')(x). I was able to deduct this since it's the last activation layer before the predictions and it happens after the attention application. 
+
+- Created the extract_embeddings.py script 
+- When ran, using: TF_CPP_MIN_LOG_LEVEL=3 python extract_embeddings.py, it will generate the csv file that should link each embedding to its activity label. It will also include .npy files for embeddings and labels
 
