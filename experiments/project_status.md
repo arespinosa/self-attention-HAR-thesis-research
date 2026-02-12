@@ -1,16 +1,16 @@
 # Project Status
 
 ## Current Phase
-1. Loading the pretrained model and preparing a script to retrieve each embedding and the distribution of each label 
-
+1. Using the embeddings I was able to extract and creating UMaps to visualize the data. 
 
 ## Completed
 1. Environment setup & config information 
 2. Download & inspect PAMAP2 dataset 
 3. Run pretrained PAMAP2 inference 
+4. Created a script that extracted the embeddings plus the activity label it predeicted. 
 
 ## Next Steps 
-1. Once we create the script, we will then begin to plot it. We can reference the other repo discussed to see how they go about implementing it. 
+1. To be determined. 
 
 ## Blockers / Risks
 - Unable to connect to the GPU. Although the NVIDIA driver is installed, for some reason the GPU does not get detected in my environment. To finish the remaining tasks of this week, I was able to run with the CPU.

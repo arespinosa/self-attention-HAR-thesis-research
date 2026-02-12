@@ -41,7 +41,7 @@ embedding_model = tf.keras.Model(
 
 embeddings = embedding_model.predict(test_x, batch_size=64)
 labels = test_y  
-
+np.save("pamap2_raw.npy", test_x)
 np.save("pamap2_embeddings.npy", embeddings)
 np.save("pamap2_labels.npy", labels)
 

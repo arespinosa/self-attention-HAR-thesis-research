@@ -74,3 +74,6 @@ Given that we know the input, we want to extract each embedding and the label of
 - Created the extract_embeddings.py script 
 - When ran, using: TF_CPP_MIN_LOG_LEVEL=3 python extract_embeddings.py, it will generate the csv file that should link each embedding to its activity label. It will also include .npy files for embeddings and labels
 
+
+### Meeting 3 (02/05/206)
+With the extracted embeddings, I referenced another repo: https://github.com/OxWearables/ssl-wearables/blob/main to see how they were able to create UMaps. Gathering from this inspiration, I was able to create UMaps of the raw input and then after training the model. From these visualizations, we are able to identify the patterns of how the activities are clumped up together. 
