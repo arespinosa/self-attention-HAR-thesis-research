@@ -75,5 +75,9 @@ Given that we know the input, we want to extract each embedding and the label of
 - When ran, using: TF_CPP_MIN_LOG_LEVEL=3 python extract_embeddings.py, it will generate the csv file that should link each embedding to its activity label. It will also include .npy files for embeddings and labels
 
 
-### Meeting 3 (02/05/206)
+### Meeting 3 (02/05/2062)
 With the extracted embeddings, I referenced another repo: https://github.com/OxWearables/ssl-wearables/blob/main to see how they were able to create UMaps. Gathering from this inspiration, I was able to create UMaps of the raw input and then after training the model. From these visualizations, we are able to identify the patterns of how the activities are clumped up together. 
+
+
+### Meeting 4 (02/18/2026)
+From the previous UMaps I generated in Meeting 3, I will be modifying them so that they display the activity labels next to the activity label id for a better analyzation. Secondly, I will be utilizing the hyperparameters from the OxWearables repo (https://github.com/OxWearables/ssl-wearables/blob/main) since they spent some time optimizing it for PAMAP2. Lastly, I will grab a random input from the PAMAP2 dataset and analyze the format characteristics. As we prepare to handle the childrens' dataset, we want to see how this repo is fitting and transforming the data to the model. 

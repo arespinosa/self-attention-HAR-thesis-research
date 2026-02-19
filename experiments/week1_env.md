@@ -15,3 +15,13 @@ Here I will decsribe the steps and configurations needed, to run initial experim
 
 
 - Current setup will run experiments on CPU
+
+### Steps to run pre-trained model 
+1. wsl -d Ubuntu 
+2. conda activate "har-env" 
+3. TF_CPP_MIN_LOG_LEVEL=3 python main.py --test --dataset pamap2
+
+### Steps to generate UMAP
+1. wsl -d Ubuntu 
+2. conda activate "visualizations" 
+3. python visualize_embeddings.py

@@ -1,13 +1,16 @@
 # Project Status
 
 ## Current Phase
-1. Using the embeddings I was able to extract and creating UMaps to visualize the data. 
+1. Modifying the UMAP script to display the activity name alongside the activity label id. 
+2. Utilizing the hyper parameters from the OxWearables repo. 
+3. Extracting one random data from PAMAP2, and understanding its format characteristic. 
 
 ## Completed
 1. Environment setup & config information 
 2. Download & inspect PAMAP2 dataset 
 3. Run pretrained PAMAP2 inference 
 4. Created a script that extracted the embeddings plus the activity label it predeicted. 
+5. Using the embeddings I was able to extract and creating UMaps to visualize the data. 
 
 ## Next Steps 
 1. To be determined. 
