@@ -29,3 +29,9 @@ uschad:
   d_model: 128
   dropout: 0.2
   n_head: 4
+
+wisdm:
+  batch_size: 128
+  d_model: 128
+  dropout: 0.2
+  n_head: 4

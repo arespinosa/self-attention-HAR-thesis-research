@@ -87,3 +87,11 @@ With the extracted embeddings, I referenced another repo: https://github.com/OxW
 From the previous UMaps I generated in Meeting 3, I will be modifying them so that they display the activity labels next to the activity label id for a better analyzation. Secondly, I will be utilizing the hyperparameters from the OxWearables repo (https://github.com/OxWearables/ssl-wearables/blob/main) since they spent some time optimizing it for PAMAP2. Lastly, I will grab a random input from the PAMAP2 dataset and analyze the format characteristics. As we prepare to handle the childrens' dataset, we want to see how this repo is fitting and transforming the data to the model.
 
 ### Meeting 5 (02/23/2026)
+First thing to note is that after looking at the .csv file for the pamap2_embeddings, we have a total window 83,351 test window samples in total. With this information, we are going to try and match it with the WISDM dataset. 
+1. In configs/activity_maps, I created the different activity labels for wisdm. I was able to grab this from make_wisdm.py in the OxFordsWearables 
+2. I downloaded the clean data from Venodo website https://zenodo.org/records/6574265#.YovCMi8w1qs 
+3. I updated the model.yaml file in configs directory to ensure that the wisdm model would be configured properly 
+4. Inside the wisdm_experiemnts folder, I have created a file that allows us to see the input shape of the wisdm data. I created the model, and stored the predictions. 
+5. In that same folder, I reused the script to create the different UMAPs for WISDM. 
+
+Apart from the wisdm update, I cleaned up the codebase by creating a folder where the pamap2_experiments are stored as well. I also updated the UMAP Visualizations where the singular input embedding is now on there as well. 
