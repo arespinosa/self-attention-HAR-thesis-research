@@ -95,3 +95,9 @@ First thing to note is that after looking at the .csv file for the pamap2_embedd
 5. In that same folder, I reused the script to create the different UMAPs for WISDM. 
 
 Apart from the wisdm update, I cleaned up the codebase by creating a folder where the pamap2_experiments are stored as well. I also updated the UMAP Visualizations where the singular input embedding is now on there as well. 
+
+### Meeting (04/09)
+We have been working on a Notebook in Colab that has been helping with the data preprocesing for the children's dataset. We split up the large amount of data and focused on one participant sample. From this participant, we are visualizing the data to see if their are missing values that require interpolation. Afterwards, we are resampling the children's data from 90 Hz to 30 Hz. 
+
+### Meeting (04/16) 
+With the one participant sample, we are now going to feed that input to this model. We will generate the UMAPs and see how well it performed on this data and classifying the activities. 
