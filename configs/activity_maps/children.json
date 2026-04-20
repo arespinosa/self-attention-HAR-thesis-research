@@ -1,8 +1,9 @@
 {
     "0": "walking",
     "1": "running",
-    "2": "stairs",
+    "2": "cycling",
     "3": "sitting",
     "4": "standing",
-    "5": "lying"
+    "5": "lying",
+    "6": "other"
 }
