@@ -37,13 +37,13 @@ pamap2_to_children = {
     12: 6,
     13: 6,
     14: 6,
-    18: 2   # rope jumping
+    18: 2  
 }
 
 children_map = {
     0: "walking",
     1: "running",
-    2: "rope jumping",
+    2: "jumping",
     3: "sitting",
     4: "standing",
     5: "lying",
@@ -56,7 +56,7 @@ children_map = {
 activity_colors = {
     0: "#1f77b4",  # walking - blue
     1: "#d62728",  # running - red
-    2: "#2ca02c",  # rope jumping - green
+    2: "#2ca02c",  # jumping - green
     3: "#ff7f0e",  # sitting - orange
     4: "#9467bd",  # standing - purple
     5: "#8c564b",  # lying - brown
@@ -141,8 +141,9 @@ for base in base_names:
     print(f"==============================")
 
     # Load data
-    X = np.load(f"{base}_X.npy")
-    X_pred = np.load(f"{base}_predictions.npy")
+    X = np.load(f"children_embeddings/{base}_X.npy")
+    # X = np.load(f"{base}_X.npy")
+    X_pred = np.load(f"children_embeddings/{base}_predictions.npy")
 
     print(f"X shape: {X.shape}")
     print(f"X_pred shape: {X_pred.shape}")
